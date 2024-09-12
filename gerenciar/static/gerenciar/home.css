@@ -1,0 +1,167 @@
+body{
+     background-image: url('/static/background.7.jpg');
+     background-repeat: no-repeat; /* Evita que a imagem se repita */
+     background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
+     background-position: center;  
+      
+}
+
+.header {
+   
+    background-color: #2575fc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.header h1 {
+    margin: 0;
+}
+.content {
+    padding: 50px 0;
+}
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.card-title {
+    color: #2575fc;
+    font-weight: bold;
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.footer {
+    background-color: #2575fc;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.btn-custom {
+    background-color: #2575fc;
+    color: white;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+.btn-custom:hover {
+    background-color: #6a11cb;
+}
+
+
+
+/* Estilo para a barra lateral */
+.sidebar {
+    background-color: #343a40;
+     height: 90vh;
+    padding-top: 20px;
+    border-right: 1px solid #dee2e6;
+}
+
+.sidebar .nav {
+    margin-top: 20px;
+}
+
+.sidebar .nav-item {
+    margin-bottom: 15px;
+}
+
+.sidebar .btn-sidebar {
+    width: 100%;
+    text-align: left;
+    padding: 12px 20px;
+    background-color: #495057;
+    color: #fff;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+.sidebar .btn-sidebar i {
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.sidebar .btn-sidebar:hover {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+/* Estilo para o ícone e espaçamento do texto */
+.sidebar .btn-sidebar i {
+    font-size: 1.3rem;
+    margin-right: 60px;
+}
+
+/* Modal estilizado */
+.modal-header {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal-header h5 {
+    margin: 0;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.close {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.close:hover {
+    color: #f8d7da;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        height: auto;
+        position: static;
+        width: 100%;
+    }
+
+    .sidebar .btn-sidebar {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  width: 200%; /* Ajuste a largura da tabela */
+}
+
+th, td {
+  background-color: #d0dfdf;
+  height: 100px; /* Ajuste a altura das células */
+  padding: 10px; /* Adicione preenchimento para aumentar o espaço interno */
+}
+
+
+
+
+
+

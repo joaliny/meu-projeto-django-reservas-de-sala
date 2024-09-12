@@ -83,3 +83,14 @@ def editar_sala(request, id):
 # @login_required
 # def profile(request):
 #     return render(request, 'profile.html')  # Cria um template profile.html para essa página
+
+
+
+
+
+
+
+
+
+
+

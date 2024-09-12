@@ -8,46 +8,238 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'gerenciar/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'gerenciar/home.css' %}">
 </head>
 <body>
 
 <div class="header">
-    <h1>Sistema de Agendamento</h1>
+    <h1>Reunião Amazônica</h1>
     <a href="{% url 'logout' %}" class="btn btn-danger float-end">Sair</a>
 </div>
+</head>
+<body>
 
-<div class="container content">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card text-center">
-                <div class="card-body">
-                    <h5 class="card-title">Listar Salas</h5>
-                    <p class="card-text">Veja todas as salas disponíveis e gerencie-as.</p>
-                    <a href="{% url 'listar_salas' %}" class="btn btn-custom">Ver Salas</a>
+
+  
+    {% comment %} <!-- Barra Lateral -->
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+            <div class="position-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'listar_salas' %}">
+                            Listar Salas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'criar_reserva' %}">
+                            Nova Reserva
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'listar_reservas' %}">
+                            Ver Reservas
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav> {% endcomment %}
+       
+        {% comment %} <div class="list-group mt-4">
+            <a href="{% url 'listar_salas' %}" class="list-group-item list-group-item-action">Listar Salas</a>
+            <a href="{% url 'criar_reserva' %}" class="list-group-item list-group-item-action">Nova Reserva</a>
+            <a href="{% url 'listar_reservas' %}" class="list-group-item list-group-item-action">Ver Reservas</a>
+        </div>
+    </div> {% endcomment %}
+
+    {% comment %} <div class="main-content">
+        <div class="container content">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Listar Salas</h5>
+                            <p class="card-text">Veja todas as salas disponíveis e gerencie-as.</p>
+                            <a href="{% url 'listar_salas' %}" class="btn btn-custom">Ver Salas</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Nova Reserva</h5>
+                            <p class="card-text">Agende uma nova sala de reunião.</p>
+                            <a href="{% url 'criar_reserva' %}" class="btn btn-custom">Agendar Sala</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Ver Reservas</h5>
+                            <p class="card-text">Veja todas as reservas e gerencie-as.</p>
+                            <a href="{% url 'listar_reservas' %}" class="btn btn-custom">Ver Reservas</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card text-center">
-                <div class="card-body">
-                    <h5 class="card-title">Nova Reserva</h5>
-                    <p class="card-text">Agende uma nova sala de reunião.</p>
-                    <a href="{% url 'criar_reserva' %}" class="btn btn-custom">Agendar Sala</a>
-                </div>
+    </div> {% endcomment %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+ <!-- Barra Lateral -->
+<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar">
+    <div class="position-sticky">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                
+                <!-- Botão para abrir o modal -->
+                <button type="button" class="btn btn-primary btn-sidebar" data-toggle="modal" data-target="#exampleModal">
+                    <i class="bi bi-building"></i> Listar Salas
+                </button>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'criar_reserva' %}" class="nav-link btn-sidebar">
+                    <i class="bi bi-calendar-plus"></i> Nova Reserva
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'listar_reservas' %}" class="nav-link btn-sidebar">
+                    <i class="bi bi-list-check"></i> Ver Reservas
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+{% comment %} <!-- Modal (Exemplo de listagem de salas) -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Listar Salas 1</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card text-center">
-                <div class="card-body">
-                    <h5 class="card-title">Ver Reservas</h5>
-                    <p class="card-text">Veja todas as reservas e gerencie-as.</p>
-                    <a href="{% url 'listar_reservas' %}" class="btn btn-custom">Ver Reservas</a>
-                </div>
+            <div class="modal-body">
+                <div class="container">
+        <h1>Salas Disponíveis</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Situação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for sala in salas %}
+                 <tr>
+                    <td>{{ sala.nome }}</td>
+                    <td>{{ sala.nome }}</td>
+                    <td>{{ sala.descricao }}</td>
+                    <td>{{ sala.situacao }}</td>
+                </tr>
+                {% endfor %}
+            </tbody> {% endcomment %}
+        
+        {% comment %} <a href="{% url 'criar_reserva' %}" class="btn btn-primary">Agendar Sala</a> {% endcomment %}
+    </div>
+                {% comment %} <p>Aqui está o conteúdo do modal com as salas listadas.</p> {% endcomment %}
             </div>
         </div>
     </div>
 </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        {% comment %} <h5 class="modal-title" id="exampleModalLabel">Título do Modal</h5> {% endcomment %}
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <div class="container">
+        <h1>Salas Disponíveis</h1>
+          <table style="width:100%">
+  <tr>
+    <th>Sala</th>
+    <th>Descrição</th> 
+    <th>Situação</th>
+    <th>Ação</th>
+  </tr>
+  <tr>
+    <td>Aquário</td>
+    <td>--</td>
+    <td>--</td>
+    <td>
+     <button onclick="editarSala('Aquário')">Editar</button>
+     <button onclick="excluirSala('Aquário')">Excluir</button>
+    </td>
+  </tr>
+  <tr>
+    <td>Daf/Ditec</td>
+    <td>--</td>
+    <td>--</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Presidência</td>
+    <td>-hxcusahdfuh</td>
+    <td>--</td>
+    <td>50</td>
+  </tr>
+   <tr>
+    <td>Tauató</td>
+    <td>--</td>
+    <td>--</td>
+    <td>5ghagdhjasgdh</td>
+  </tr>
+</table>
+
+            <tbody>
+                {% for sala in salas %}
+                <tr>
+                    <td>{{ sala.nome }}</td>
+                    <td>{{ sala.descricao }}</td>
+                    <td>{{ sala.situacao }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'criar_reserva' %}" class="btn btn-primary">Agendar Sala</a>
+    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar mudanças</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function editarSala(nomeSala) {
+    alert('Editando sala: ' + nomeSala);
+    // Aqui pode adicionar o código para editar a sala
+  }
+
+  function excluirSala(nomeSala) {
+    alert('Excluindo sala: ' + nomeSala);
+    // Aqui pode adicionar o código para excluir a sala
+  }
+</script>
+
 
 <div class="footer">
     <p>&copy; 2024 Sistema de Agendamento. Todos os direitos reservados.</p>

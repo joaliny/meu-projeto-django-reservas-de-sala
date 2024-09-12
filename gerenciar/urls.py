@@ -30,8 +30,7 @@ urlpatterns = [
     path('reservas/cancelar/<int:id>/', views.cancelar_reserva, name='cancelar_reserva'),
    
 
-    
- 
+
 ]
     
 
