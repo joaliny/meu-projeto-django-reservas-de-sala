@@ -28,7 +28,8 @@ urlpatterns = [
     path('reservas/nova/', views.criar_reserva, name='criar_reserva'),
     path('reservas/editar/<int:id>/', views.editar_reserva, name='editar_reserva'),
     path('reservas/cancelar/<int:id>/', views.cancelar_reserva, name='cancelar_reserva'),
-   
+    
+    
 
 
 ]

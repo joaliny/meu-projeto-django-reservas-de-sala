@@ -60,7 +60,7 @@ body{
     background-color: #343a40;
      height: 90vh;
     padding-top: 20px;
-    border-right: 1px solid #dee2e6;
+    /* border-right: 1px solid #dee2e6; */
 }
 
 .sidebar .nav {
@@ -102,33 +102,7 @@ body{
     margin-right: 60px;
 }
 
-/* Modal estilizado */
-.modal-header {
-    background-color: #0d6efd;
-    color: white;
-}
 
-.modal-content {
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.modal-header h5 {
-    margin: 0;
-}
-
-.modal-body {
-    padding: 20px;
-}
-
-.close {
-    color: white;
-    font-size: 1.5rem;
-}
-
-.close:hover {
-    color: #f8d7da;
-}
 
 /* Media Queries para responsividade */
 @media (max-width: 768px) {
@@ -146,20 +120,33 @@ body{
 
 
 
-
-
-table, th, td {
-  border: 1px solid white;
-  border-collapse: collapse;
-  width: 200%; /* Ajuste a largura da tabela */
-}
-
-th, td {
-  background-color: #d0dfdf;
-  height: 100px; /* Ajuste a altura das células */
-  padding: 10px; /* Adicione preenchimento para aumentar o espaço interno */
-}
-
+ .modal-header {
+            background-color: #007bff;
+            color: white;
+            border-bottom: none;
+        }
+        .modal-body {
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 1rem;
+            background-color: transparent;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #253e58;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .btn-action {
+            margin-right: 10px;
+        }
 
 
 

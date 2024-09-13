@@ -86,6 +86,9 @@ def editar_sala(request, id):
 
 
 
+def home(request):
+    reservas = Reserva.objects.all()  # ou o queryset correto
+    return render(request, 'home.html', {'reservas': reservas})
 
 
 

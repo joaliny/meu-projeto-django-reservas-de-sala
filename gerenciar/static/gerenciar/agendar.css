@@ -1,0 +1,53 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Helvetica', sans-serif;
+}
+
+h1 {
+    color: #343a40;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.table {
+    background-color: #fff;
+}
+
+.table thead th {
+    background-color: #343a40;
+    color: white;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.modal-body input {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.container {
+    margin-top: 50px;
+}
+
